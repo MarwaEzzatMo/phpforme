@@ -30,22 +30,21 @@ echo " <Table striped bordered hover  class=' py-4 px-5 bg=dark  text-dark expan
     <th style ='width: 5%'>ginder</th> 
     <th style ='width: 8%'>user name</th> 
     <th style ='width: 10%'>department</th>
-    
     <th style='width: 25%'>Action</th>
   </tr>";
 //echo ($_SERVER["REQUEST_URI"]);
 foreach ($users as $index=>$l){  # $l --> line ===> is string
     $line = explode(":", $l); # convert the string to array
-
+//var_dump($line);
     echo "<tr>";
-    echo " <td>{$line[9]}</td><td>{$line[0]}</td>
+    echo " <td>{$line[8]}</td><td>{$line[0]}</td>
             <td>{$line[1]}</td>
           <td>{$line[2]}</td> <td>{$line[3]}</td>
           <td>{$line[4]}</td> <td>{$line[5]}</td>
-          <td>{$line[6]}</td> <td>{$line[8]}</td>
-           <td>{$line[10]}</td>
+          <td>{$line[6]}</td> <td>{$line[7]}</td>
+           <td>{$line[9]}</td> 
          <td><button ><a href='viewuser.php?id={$index}'> View</a></button>
-         <button> <a href='#'>Edit</a></button>
+         <button> <a href='edit.php?id={$index}'>Edit</a></button>
          <button><a href='delete.php?id={$index}'> delete </a></button></td>";
     echo "</tr>";
 }

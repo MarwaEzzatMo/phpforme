@@ -23,7 +23,7 @@
 </head>
 <body> 
 
-<form action="./validation.php" method="post">
+<form action="./validation.php" method="post"  enctype="multipart/form-data">
 <div class="container-fluid px-1 py-5 mx-auto">
     <div class="row d-flex justify-content-center">
         <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
@@ -104,7 +104,7 @@
                 </div>
             </div>
                         
-            <div class="row form-group">
+            <!-- <div class="row form-group">
                 <label class="control-label col-sm-3" for="skills[]">Skills : <span class="text-danger">* <?php 
 						if(isset($errors->skills)){
 							echo "<span style='color:red'> $errors->skills </span>";
@@ -123,7 +123,7 @@
                     <input type="checkbox" name="skills[]" value="java" id="java" style="margin-left: 50px;" value="<?php if(isset($olddata->skills)) {echo $olddata->skills;} ?>" >
                     <label for="java">Java</label>
                 </div>
-            </div>
+            </div> -->
 
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">User Name<span class="text-danger"> * <?php 
@@ -148,7 +148,21 @@
 							
 						}
 					?></span></label> <input type="text" id="job" name="dept" placeholder="" onblur="validate(5)" value="<?php if(isset($olddata->dept)) {echo $olddata->dept;} ?>"> </div>
-                    </div>
+                
+                <div class="form-group col-sm-6 flex-column d-flex">
+                    <label>Upload profile picture</label>
+                    <input class="form-style" type="file" name="image"/>
+                    <?php
+                    if (isset($errors->image)) {
+                            echo "<p class='error' >$errors->image</p>";
+                       }
+                     ?>
+                </div>     
+                
+                </div>
+ 
+                     
+                   
 
                     <div class="row justify-content-center ms-3">
                         <div class="form-group col-sm-5"> <button type="submit" class="btn-block btn-primary">Submit</button> </div> 
