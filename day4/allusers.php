@@ -26,18 +26,18 @@ try{
 
 echo " <Table striped bordered hover  class=' py-4 px-5 bg=dark  text-dark expand=lg  alert alert-info text-center'    >
 <thead>
-  <tr  class='bg-light p-3 m-3'  style={{width: '25%', height : '60px' }}>
+  <tr  class='bg-light p-3 m-3'  style={{width: '100%', height : '60px' }}>
     <th style ='width: 5%'>Id</th>
-    <th style ='width: 8%'>first Name</th>
-    <th style ='width: 8%'>last name</th>
+    <th style ='width: 9%'>first Name</th>
+    <th style ='width: 9%'>last name</th>
     <th style ='width: 10%'>Email</th> 
-    <th style ='width: 8%' >phone</th> 
-    <th style ='width: 8%'>address</th>  
-    <th style ='width: 8%'>country</th>
-    <th style ='width: 5%'>ginder</th> 
-    <th style ='width: 8%'>user name</th> 
-    <th style ='width: 10%'>department</th>
-    <th style='width: 25%'>Action</th>
+    <th style ='width: 10%' >phone</th> 
+    <th style ='width: 10%'>address</th>  
+    <th style ='width: 9%'>country</th>
+    <th style ='width: 9%'>ginder</th> 
+    <th style ='width: 10%'>user name</th> 
+    <th style ='width: 8%'>department</th>
+    <th style='width: 29%'>Action</th>
   </tr>";
 
 

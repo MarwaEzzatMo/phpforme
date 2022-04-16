@@ -86,8 +86,8 @@
 
 
 
-$dbConnection = require 'connectdb.php';
-        $insert_query = "insert into test2(`fname`, `lname`,`username`, `email` , `password` , `department`, `phone`, `gender`,`country`, `address`) values(?,?,?,?,?,?,?,?,?,?)";
+$dbConnection = require 'connectdb.php';  //require 'dbconnect.php';
+        $insert_query = "insert into test2(`fname`, `lname`,`username`, `email` , `password` , `department`, `phone`, `gender`,`country`, `address` ) values(?,?,?,?,?,?,?,?,?,?)";
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $username = $_POST['username'];

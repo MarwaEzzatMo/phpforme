@@ -12,7 +12,7 @@ try {
     $department = $_POST['department'];
 
     $dbConnection = require 'connectdb.php';
-    $updateStm = "update `test2` set `fname`=?, `lname`=?, `email`=?,  `address`=? , `gender`=? , `country`=? ,`username`= ?, `department`=? where `ID`=$userID";
+    $updateStm = "update `test2` set `fname`=?, `lname`=?, `email`=? ,  `address`=? , `gender`=? , `country`=? ,`username`= ?, `department`=? where `ID`=$userID";
     $prepareStm = $db->prepare($updateStm);
     $res = $prepareStm->execute([ $fname ,   $lname , $email  ,$address ,$gender ,$country , $username, $department]);
     header("Location: allusers.php");
